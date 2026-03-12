@@ -10,6 +10,7 @@ export default class Cl_Bodega{
     procesarArticulo(a:Cl_Articulo): void {
         this.acGanancia+= a.ganancia();
     }
+
     totalGanancia(): number {
         return this.acGanancia;
     }

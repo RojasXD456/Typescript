@@ -1,5 +1,7 @@
+import { DefaultSerializer } from "node:v8";
 import Cl_Articulo from "./Cl_Articulo.js";
 import Cl_Bodega from "./Cl_Bodega.js";
+import { setDefaultCACertificates } from "node:tls";
 
 const articulo1:Cl_Articulo = new Cl_Articulo(10);
 const articulo2:Cl_Articulo = new Cl_Articulo(20);
@@ -16,3 +18,4 @@ bodega.procesarArticulo(articulo5);
 
 let body = document.getElementById("body");
 if (body) body.innerHTML =`La ganancia sera de Bs.${bodega.totalGanancia()}`
+
